@@ -4,7 +4,6 @@ defmodule Webpay.API do
     HTTPoison.start
     query = query
             |> Webpay.Utils.encode_body
-    IO.inspect body
     HTTPoison.get!(url, query, Webpay.auth_header).body
     |> Poison.decode!
   end
@@ -15,6 +14,12 @@ defmodule Webpay.API do
             |> Webpay.Utils.encode_body
     IO.inspect body
     HTTPoison.post!(url, body, Webpay.auth_header).body
+    |> Poison.decode!
+  end
+
+  def delete(url, body \\ []) do
+    HTTPoison.start
+    HTTPoison.delete!(url, body, Webpay.auth_header).body
     |> Poison.decode!
   end
 

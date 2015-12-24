@@ -3,11 +3,14 @@ defmodule Webpay.Tokens do
   Create webpay card token
   """
 
-  use Webpay.API, method: :post
-
-  defp expected_fields, do: ~w(
-    id object livemode created used card
-  )
+  @doc """
+  Create a token of payment card
+  """
+  def create(opts) do
+    opts
+    |> request_body
+    |> Webpay.API.post
+  end
 
   defp process_url do
     Webpay.endpoint <> "/v1/tokens"

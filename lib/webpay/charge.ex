@@ -18,9 +18,10 @@ defmodule Webpay.Charge do
     ])
   """
   def create(opts) do
+    body = request_body(opts)
+
     process_url
-    |> request_body(opts)
-    |> Webpay.API.post
+    |> Webpay.API.post(body)
   end
 
   defp request_body(opts) do
