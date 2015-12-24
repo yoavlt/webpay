@@ -1,6 +1,6 @@
 # Webpay
 
-Elixir wrapper of [Webpay](https://webpay.jo)
+Elixir wrapper of [Webpay](https://webpay.jp)
 
 ## Installation
 
