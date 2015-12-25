@@ -34,7 +34,7 @@ defmodule Webpay.Customers do
   @doc """
   fetch list of customers
   """
-  def list(opts) do
+  def list(opts \\ []) do
     Webpay.API.get(root_url, opts)
   end
 
