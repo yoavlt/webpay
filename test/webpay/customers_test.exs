@@ -1,5 +1,5 @@
 defmodule Webpay.CustomersTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   alias Webpay.Tokens
   alias Webpay.Customers
 
