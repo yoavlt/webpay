@@ -1,10 +1,16 @@
 defmodule Webpay.Mixfile do
   use Mix.Project
 
+  @description """
+    Elixir Webpay API wrapper
+  """
+
   def project do
     [app: :webpay,
      version: "0.0.1",
      elixir: "~> 1.1",
+     name: "Webpay",
+     description: @description,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]

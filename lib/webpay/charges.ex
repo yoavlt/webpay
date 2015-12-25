@@ -112,14 +112,6 @@ defmodule Webpay.Charges do
     Keyword.take(opts, [:amount])
   end
 
-  defp list_query(opts) do
-    keys = ~w(count offset created
-       customer shop recursion)
-       |> Enum.map(&String.to_atom/1)
-
-    Keyword.take(opts, keys)
-  end
-
   defp create_body(opts) do
     Webpay.Utils.fetch_currency!(opts[:currency])
     opts

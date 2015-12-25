@@ -50,8 +50,4 @@ defmodule Webpay.Recursions do
     |> Webpay.delete
   end
 
-  @doc """
-  fetch list of recursions
-  """
-
 end
