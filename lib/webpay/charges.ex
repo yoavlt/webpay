@@ -22,7 +22,7 @@ defmodule Webpay.Charges do
   @doc """
   Create charge
 
-  iex) Webpay.Charge.create([
+  iex) Webpay.Charges.create([
       amount: 400,
       currency: :jpy,
       card: "card token",

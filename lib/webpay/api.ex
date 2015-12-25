@@ -16,14 +16,13 @@ defmodule Webpay.API do
     HTTPoison.start
     body = req_body
             |> Webpay.Utils.encode_body
-    IO.inspect body
     HTTPoison.post!(url, body, Webpay.auth_header)
     |> handle_response
   end
 
-  def delete(url, body \\ []) do
+  def delete(url) do
     HTTPoison.start
-    HTTPoison.delete!(url, body, Webpay.auth_header)
+    HTTPoison.delete!(url, Webpay.auth_header)
     |> handle_response
   end
 
