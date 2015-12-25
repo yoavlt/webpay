@@ -37,5 +37,5 @@ Webpay.Charges.create [
   currency: :jpy,
   card: "card token",
   description: ""
-])
+]
 ```
