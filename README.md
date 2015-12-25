@@ -29,3 +29,13 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
   api_key: "your api key"
 ```
 
+## Usage
+
+```elixir
+Webpay.Charges.create [
+  amount: 400,
+  currency: :jpy,
+  card: "card token",
+  description: ""
+])
+```
