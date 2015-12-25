@@ -7,7 +7,7 @@ defmodule Webpay.Mixfile do
 
   def project do
     [app: :webpay,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.1",
      name: "Webpay",
      description: @description,
@@ -36,7 +36,8 @@ defmodule Webpay.Mixfile do
   defp deps do
     [
       {:poison, "~> 1.5"},
-      {:httpoison, "~> 0.8.0"}
+      {:httpoison, "~> 0.8.0"},
+      {:ex_doc, "~> 0.8.0", only: :docs},
     ]
   end
 end

@@ -10,7 +10,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
 ```elixir
   def deps do
-  [{:webpay, "~> 0.0.1"}]
+  [{:webpay, "~> 0.0.2"}]
   end
 ```
 
@@ -26,6 +26,6 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
 ```elixir
   config :your_application, :webpay,
-  webpay_api_key: "your api key"
+  api_key: "your api key"
 ```
 
