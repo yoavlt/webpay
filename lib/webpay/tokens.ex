@@ -7,9 +7,8 @@ defmodule Webpay.Tokens do
   Create a token of payment card
   """
   def create(opts) do
-    opts
-    |> request_body
-    |> Webpay.API.post
+    body = request_body(opts)
+    Webpay.API.post(process_url, body)
   end
 
   defp process_url do
