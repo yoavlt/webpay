@@ -20,8 +20,13 @@ defmodule Webpay do
       "Content-type" => "application/x-www-form-urlencoded"}
   end
 
+  defp config do
+    app = Mix.Project.config[:app]
+    Application.get_env(app, :webpay)
+  end
+
   defp fetch_api_key do
-    Application.get_env(:webpay, :api_key) ||
+    config()[:api_key] ||
       System.get_env("WEBPAY_API_KEY")
   end
 
