@@ -21,8 +21,7 @@ defmodule Webpay do
   end
 
   defp config do
-    app = Mix.Project.config[:app]
-    Application.get_env(app, :webpay)
+    Application.get_env(:webpay, Webpay)
   end
 
   defp fetch_api_key do

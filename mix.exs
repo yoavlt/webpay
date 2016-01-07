@@ -7,7 +7,7 @@ defmodule Webpay.Mixfile do
 
   def project do
     [app: :webpay,
-     version: "0.0.3",
+     version: "0.0.4",
      elixir: "~> 1.1",
      name: "Webpay",
      description: @description,
