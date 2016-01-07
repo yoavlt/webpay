@@ -25,7 +25,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
   3. Puts config your `config.exs`
 
 ```elixir
-  config :your_application, :webpay,
+  config :webpay, Webpay,
   api_key: "your api key"
 ```
 
